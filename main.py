@@ -191,7 +191,7 @@ if __name__ == '__main__':
                     best_epoch = epoch
                     th.save(model.state_dict(), args.dataname + '.pkl')
                 no_improvement = 0
-                loss_best = min(loss_val, loss_best)
+                loss_best = min(float(loss_val), loss_best)
                 acc_best = max(acc_val, acc_best)
             else:
                 no_improvement += 1
